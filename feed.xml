@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-09-25T18:57:44.084127+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-09-25T18:57:44.263927+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-09-25T19:12:59.115152+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-09-25T19:12:59.470080+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
 <pre><code>名字：xxxxxx
 链接：xxxxxx
 描述：xxxxxx

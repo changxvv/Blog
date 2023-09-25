@@ -14,9 +14,9 @@ My personal blog using issues and GitHub Actions.
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>$\textbf{H{\color{red}olyk}}$</td>
+<td>https://blog.asukakyle.top/</td>
+<td>hxd、本科室友、World Final 爷</td>
 </tr>
 </tbody>
 </table>
