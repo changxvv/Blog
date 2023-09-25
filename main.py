@@ -9,7 +9,7 @@ from github import Github
 from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
-MD_HEAD = """## Github Issue Blog
+MD_HEAD = """# Github Issue Blog
 My personal blog using issues and GitHub Actions.
 
 [RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
@@ -92,9 +92,9 @@ def parse_TODO(issue):
 	todo_done = [l for l in body if l.startswith("- [x] ")]
 	# just add info all done
 	if not todo_undone:
-		return f"[{issue.title}]({issue.html_url}) all done", []
+		return f"[{issue.title}]({issue.html_url}) all done.", []
 	return (
-		f"[{issue.title}]({issue.html_url})--{len(todo_undone)} jobs to do--{len(todo_done)} jobs done",
+		f"[{issue.title}]({issue.html_url}) —— {len(todo_undone)} jobs to do, {len(todo_done)} jobs done.",
 		todo_done + todo_undone,
 	)
 
@@ -117,7 +117,7 @@ def get_issues_from_label(repo, label):
 
 def add_issue_info(issue, md):
 	time = format_time(issue.created_at)
-	md.write(f"- [{issue.title}]({issue.html_url})--{time}\n")
+	md.write(f"- [{issue.title}]({issue.html_url}) -- {time}\n")
 
 
 def add_md_todo(repo, md, me):

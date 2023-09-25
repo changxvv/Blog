@@ -2,8 +2,8 @@ name: Generate GitBlog README
 
 on:
   workflow_dispatch:
-    issues:
-      types: [opened, edited]
+  issues:
+    types: [opened, edited]
   issue_comment:
     types: [created, edited]
   push:
@@ -43,5 +43,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add BACKUP/*.md
-          git commit -a -m 'update new blog' || echo "nothing to commit"
+          git commit -a -m 'update blog' || echo "nothing to commit"
           git push || echo "nothing to push"
