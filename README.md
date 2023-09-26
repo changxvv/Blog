@@ -32,6 +32,9 @@ Subscribe to [RSS Feed](https://raw.githubusercontent.com/changxvv/Blog/master/f
 
 </details>
 
+## 置顶文章
+- [格式规范](https://github.com/changxvv/Blog/issues/3) -- 2023-09-26
 ## 最近更新
+- [格式规范](https://github.com/changxvv/Blog/issues/3) -- 2023-09-26
 - [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
 - [友情链接](https://github.com/changxvv/Blog/issues/1) -- 2023-09-25
