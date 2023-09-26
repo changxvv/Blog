@@ -21,6 +21,11 @@ My personal blog using issues and GitHub Actions.
 <td>https://blog.asukakyle.top/</td>
 <td>hxd、本科室友、World Final 爷</td>
 </tr>
+<tr>
+<td>千年八云紫</td>
+<td>https://reimu.red/</td>
+<td>hxd、geek、啥都会</td>
+</tr>
 </tbody>
 </table>
 
