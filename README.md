@@ -22,4 +22,7 @@ My personal blog using issues and GitHub Actions.
 </table>
 
 ## 最近更新
+- [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
 - [友情链接](https://github.com/changxvv/Blog/issues/1) -- 2023-09-25
+## About me
+- [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
