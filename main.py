@@ -136,11 +136,11 @@ def add_md_todo(repo, md, me):
 		for issue in todo_issues:
 			if is_me(issue, me):
 				todo_title, todo_list = parse_TODO(issue)
-				md.write("TODO list from " + todo_title + "\n")
+				md.write("<details><summary>TODO list from " + todo_title + "</summary>\n")
 				for t in todo_list:
 					md.write(t + "\n")
 				# new line
-				md.write("\n")
+				md.write("</details>\n")
 
 
 def add_md_top(repo, md, me):
@@ -169,10 +169,10 @@ def add_md_firends(repo, md, me):
 	s = markdown.markdown(s, output_format="html", extensions=["extra"])
 	with open(md, "a+", encoding="utf-8") as md:
 		md.write(
-			f"## [友情链接](https://github.com/{str(me)}/gitblog/issues/{friends_issue_number})\n"
+			f"## <details>\n<summary>[友情链接](https://github.com/{str(me)}/Blog/issues/{friends_issue_number})</summmary>\n\n"
 		)
 		md.write(s)
-		md.write("\n\n")
+		md.write("</details>\n\n")
 
 
 def add_md_recent(repo, md, me, limit=5):
