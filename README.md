@@ -6,7 +6,9 @@ My personal blog using issues and GitHub Actions.
 ## About me
 本科 *中南大学* 在读。
 
-## [友情链接](https://github.com/changxvv/gitblog/issues/1)
+## <details>
+<summary>[友情链接](https://github.com/changxvv/Blog/issues/1)</summmary>
+
 <table>
 <thead>
 <tr>
@@ -27,7 +29,7 @@ My personal blog using issues and GitHub Actions.
 <td>hxd、geek、啥都会</td>
 </tr>
 </tbody>
-</table>
+</table></details>
 
 ## 最近更新
 - [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
