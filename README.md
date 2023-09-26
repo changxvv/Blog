@@ -6,7 +6,7 @@ Subscribe to [RSS Feed](https://raw.githubusercontent.com/changxvv/Blog/master/f
 ## About me
 本科 *中南大学* 在读。
 
-<details><summary><h2><a href="https://github.com/changxvv/Blog/issues/1"> 友情链接 </a></h2></summmary>
+<details><summary><h2><a href="https://github.com/changxvv/Blog/issues/1"> 友情链接 </a></h2></summary>
 
 <table>
 <thead>
