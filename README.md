@@ -1,13 +1,12 @@
 # Github Issue Blog
 My personal blog using issues and GitHub Actions.
 
-[RSS Feed](https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml)
+Subscribe to [RSS Feed](https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml)
 
 ## About me
 本科 *中南大学* 在读。
 
-## <details>
-<summary>[友情链接](https://github.com/changxvv/Blog/issues/1)</summmary>
+<details><summary><h2><a href="https://github.com/changxvv/Blog/issues/1"> 友情链接 </a></h2></summmary>
 
 <table>
 <thead>
@@ -29,7 +28,9 @@ My personal blog using issues and GitHub Actions.
 <td>hxd、geek、啥都会</td>
 </tr>
 </tbody>
-</table></details>
+</table>
+
+</details>
 
 ## 最近更新
 - [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
