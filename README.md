@@ -3,6 +3,9 @@ My personal blog using issues and GitHub Actions.
 
 [RSS Feed](https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml)
 
+## About me
+本科 *中南大学* 在读。
+
 ## [友情链接](https://github.com/changxvv/gitblog/issues/1)
 <table>
 <thead>
@@ -24,5 +27,3 @@ My personal blog using issues and GitHub Actions.
 ## 最近更新
 - [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
 - [友情链接](https://github.com/changxvv/Blog/issues/1) -- 2023-09-25
-## About me
-- [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
