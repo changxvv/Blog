@@ -12,7 +12,7 @@ from marko.ext.gfm import gfm as marko
 MD_HEAD = """# Github Issue Blog
 My personal blog using issues and GitHub Actions.
 
-[RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
+Subscribe to [RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
 """
 
 BACKUP_DIR = "BACKUP"
@@ -169,10 +169,10 @@ def add_md_firends(repo, md, me):
 	s = markdown.markdown(s, output_format="html", extensions=["extra"])
 	with open(md, "a+", encoding="utf-8") as md:
 		md.write(
-			f"## <details>\n<summary>[友情链接](https://github.com/{str(me)}/Blog/issues/{friends_issue_number})</summmary>\n\n"
+			f"<details><summary><h2><a href=\"https://github.com/{str(me)}/Blog/issues/{friends_issue_number}\"> 友情链接 </a></h2></summmary>\n\n"
 		)
 		md.write(s)
-		md.write("</details>\n\n")
+		md.write("\n\n</details>\n\n")
 
 
 def add_md_recent(repo, md, me, limit=5):
