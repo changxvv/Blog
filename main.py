@@ -169,7 +169,7 @@ def add_md_firends(repo, md, me):
 	s = markdown.markdown(s, output_format="html", extensions=["extra"])
 	with open(md, "a+", encoding="utf-8") as md:
 		md.write(
-			f"<details><summary><h2><a href=\"https://github.com/{str(me)}/Blog/issues/{friends_issue_number}\"> 友情链接 </a></h2></summmary>\n\n"
+			f"<details><summary><h2><a href=\"https://github.com/{str(me)}/Blog/issues/{friends_issue_number}\"> 友情链接 </a></h2></summary>\n\n"
 		)
 		md.write(s)
 		md.write("\n\n</details>\n\n")
