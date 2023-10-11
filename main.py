@@ -9,10 +9,15 @@ from github import Github
 from lxml.etree import CDATA
 from marko.ext.gfm import gfm as marko
 
-MD_HEAD = """# Github Issue Blog
+MD_HEAD = """# Github Issue Blog [![Rss](https://img.shields.io/badge/rss-F88900?style=for-the-badge&logo=rss&logoColor=white)](https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
+
 My personal blog using issues and GitHub Actions.
 
-Subscribe to [RSS Feed](https://raw.githubusercontent.com/{repo_name}/master/feed.xml)
+<div align='center'>
+  <img src="graphics/meme.png" alt="Fight for PhD" />
+  <sub><i>猫猫来自 <a href="https://weibo.com/u/2169547965">@魏大葱有木瓜</a></i></sub>
+</div> 
 """
 
 BACKUP_DIR = "BACKUP"
