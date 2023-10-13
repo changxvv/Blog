@@ -128,8 +128,9 @@ def get_issues_from_label(repo, label):
 
 
 def add_issue_info(issue, md):
-	time = format_time(issue.created_at)
-	md.write(f"- [{issue.title}]({issue.html_url}) -- {time}\n")
+	create_time = format_time(issue.created_at)
+	update_time = format_time(issue.updated_at)
+	md.write(f"- [{issue.title}]({issue.html_url}) [![created on](https://img.shields.io/badge/created%20on-{create_time}-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-{update_time}-green)](#)\n")
 
 
 def add_md_todo(repo, md, me):
@@ -186,7 +187,7 @@ def add_md_recent(repo, md, me, limit=5):
 		# one the issue that only one issue and delete (pyGitHub raise an exception)
 		try:
 			md.write("## 最近更新\n")
-			for issue in repo.get_issues():
+			for issue in repo.get_issues(sort='updated'):
 				if is_me(issue, me):
 					add_issue_info(issue, md)
 					count += 1
@@ -238,7 +239,7 @@ def add_md_label(repo, md, me):
 			issues = get_issues_from_label(repo, label)
 			if issues.totalCount:
 				md.write("## " + label.name + "\n")
-				issues = sorted(issues, key=lambda x: x.created_at, reverse=True)
+				issues = sorted(issues, key=lambda x: x.updated_at, reverse=True)
 			i = 0
 			for issue in issues:
 				if not issue:
