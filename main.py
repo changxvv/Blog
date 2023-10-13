@@ -83,7 +83,7 @@ def _valid_xml_char_ordinal(c):
 
 
 def format_time(time):
-	return str(time)[:10]
+	return str(time)[:10].replace("-", "--")
 
 
 def login(token):
@@ -130,7 +130,7 @@ def get_issues_from_label(repo, label):
 def add_issue_info(issue, md):
 	create_time = format_time(issue.created_at)
 	update_time = format_time(issue.updated_at)
-	md.write(f"- [{issue.title}]({issue.html_url}) [![created on](https://img.shields.io/badge/created%20on-{create_time}-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-{update_time}-green)](#)\n")
+	md.write(f"- [{issue.title}]({issue.html_url}) ![created on](https://img.shields.io/badge/created%20on-{create_time}-blue) ![updated on](https://img.shields.io/badge/updated%20on-{update_time}-green)\n")
 
 
 def add_md_todo(repo, md, me):
