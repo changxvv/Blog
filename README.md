@@ -38,8 +38,8 @@ My personal blog using issues and GitHub Actions.
 </details>
 
 ## 置顶文章
-- [格式规范](https://github.com/changxvv/Blog/issues/3) [![created on](https://img.shields.io/badge/created%20on-2023-09-26-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-10-13-green)](#)
+- [格式规范](https://github.com/changxvv/Blog/issues/3) ![created on](https://img.shields.io/badge/created%20on-2023--09--26-blue) ![updated on](https://img.shields.io/badge/updated%20on-2023--10--13-green)
 ## 最近更新
-- [格式规范](https://github.com/changxvv/Blog/issues/3) [![created on](https://img.shields.io/badge/created%20on-2023-09-26-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-10-13-green)](#)
-- [友情链接](https://github.com/changxvv/Blog/issues/1) [![created on](https://img.shields.io/badge/created%20on-2023-09-25-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-10-13-green)](#)
-- [关于我](https://github.com/changxvv/Blog/issues/2) [![created on](https://img.shields.io/badge/created%20on-2023-09-26-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-09-26-green)](#)
+- [格式规范](https://github.com/changxvv/Blog/issues/3) ![created on](https://img.shields.io/badge/created%20on-2023--09--26-blue) ![updated on](https://img.shields.io/badge/updated%20on-2023--10--13-green)
+- [友情链接](https://github.com/changxvv/Blog/issues/1) ![created on](https://img.shields.io/badge/created%20on-2023--09--25-blue) ![updated on](https://img.shields.io/badge/updated%20on-2023--10--13-green)
+- [关于我](https://github.com/changxvv/Blog/issues/2) ![created on](https://img.shields.io/badge/created%20on-2023--09--26-blue) ![updated on](https://img.shields.io/badge/updated%20on-2023--09--26-green)
