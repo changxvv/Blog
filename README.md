@@ -25,12 +25,12 @@ My personal blog using issues and GitHub Actions.
 <tr>
 <td>$\textbf{H{\color{red}olyk}}$</td>
 <td>https://blog.asukakyle.top/</td>
-<td>hxd、本科室友、World Final 爷</td>
+<td>好兄弟、本科室友、World Final 爷</td>
 </tr>
 <tr>
 <td>千年八云紫</td>
 <td>https://reimu.red/</td>
-<td>hxd、geek、啥都会</td>
+<td>好兄弟、Geek、啥都会</td>
 </tr>
 </tbody>
 </table>
@@ -38,8 +38,8 @@ My personal blog using issues and GitHub Actions.
 </details>
 
 ## 置顶文章
-- [格式规范](https://github.com/changxvv/Blog/issues/3) -- 2023-09-26
+- [格式规范](https://github.com/changxvv/Blog/issues/3) [![created on](https://img.shields.io/badge/created%20on-2023-09-26-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-10-13-green)](#)
 ## 最近更新
-- [格式规范](https://github.com/changxvv/Blog/issues/3) -- 2023-09-26
-- [关于我](https://github.com/changxvv/Blog/issues/2) -- 2023-09-26
-- [友情链接](https://github.com/changxvv/Blog/issues/1) -- 2023-09-25
+- [格式规范](https://github.com/changxvv/Blog/issues/3) [![created on](https://img.shields.io/badge/created%20on-2023-09-26-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-10-13-green)](#)
+- [友情链接](https://github.com/changxvv/Blog/issues/1) [![created on](https://img.shields.io/badge/created%20on-2023-09-25-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-10-13-green)](#)
+- [关于我](https://github.com/changxvv/Blog/issues/2) [![created on](https://img.shields.io/badge/created%20on-2023-09-26-blue)](#) [![updated on](https://img.shields.io/badge/updated%20on-2023-09-26-green)](#)
