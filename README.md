@@ -40,6 +40,12 @@ My personal blog using issues and GitHub Actions.
 ## 置顶文章
 - [格式规范](https://github.com/changxvv/Blog/issues/3) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 ## 最近更新
+- [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
 - [格式规范](https://github.com/changxvv/Blog/issues/3) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 - [友情链接](https://github.com/changxvv/Blog/issues/1) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 - [关于我](https://github.com/changxvv/Blog/issues/2) ![updated on](https://img.shields.io/badge/updated-2023--09--26-green)
+## Tips
+- [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
+## TODO
+<details><summary>TODO list from [我的学习体系](https://github.com/changxvv/Blog/issues/4) all done.</summary>
+</details>
