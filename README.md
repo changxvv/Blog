@@ -47,5 +47,6 @@ My personal blog using issues and GitHub Actions.
 ## Tips
 - [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
 ## TODO
-<details><summary>TODO list from [我的学习体系](https://github.com/changxvv/Blog/issues/4) all done.</summary>
+<details><summary>TODO list from [我的学习体系](https://github.com/changxvv/Blog/issues/4) —— 1 jobs to do, 0 jobs done.</summary>
+- [ ] 需要完善人生目标管理系统、时间管理工具、信息收集系统、输出系统部分。
 </details>
