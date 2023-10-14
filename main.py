@@ -68,10 +68,8 @@ def _make_friend_table_string(s):
 		return
 
 
+# help to covert xml vaild string
 def _valid_xml_char_ordinal(c):
-	'''
-	help to covert xml vaild string
-	'''
 	codepoint = ord(c)
 	# conditions ordered by presumed frequency
 	return (
@@ -96,8 +94,11 @@ def get_repo(user: Github, repo: str):
 
 def parse_TODO(issue):
 	body = issue.body.splitlines()
-	todo_undone = [l for l in body if l.startswith("- [ ] ")]
-	todo_done = [l for l in body if l.startswith("- [x] ")]
+	todo_undone_pattern = re.compile(r'^(>?\s*- \[ \])')
+	todo_done_pattern = re.compile(r'^(>?\s*- \[x])')
+
+	todo_undone = [l for l in body if todo_undone_pattern.match(l)]
+	todo_done = [l for l in body if todo_done_pattern.match(l)]
 	# just add info all done
 	if not todo_undone:
 		return f"[{issue.title}]({issue.html_url}) all done.", []
@@ -143,11 +144,11 @@ def add_md_todo(repo, md, me):
 		for issue in todo_issues:
 			if is_me(issue, me):
 				todo_title, todo_list = parse_TODO(issue)
-				md.write("<details><summary>TODO list from " + todo_title + "</summary>\n")
+				md.write("<details>\n<summary>TODO list from " + todo_title + "</summary>\n\n")
 				for t in todo_list:
 					md.write(t + "\n")
 				# new line
-				md.write("</details>\n")
+				md.write("\n</details>\n")
 
 
 def add_md_top(repo, md, me):
@@ -159,11 +160,14 @@ def add_md_top(repo, md, me):
 		for issue in top_issues:
 			if is_me(issue, me):
 				add_issue_info(issue, md)
+		md.write("\n")
 
 
 def add_md_firends(repo, md, me):
 	s = FRIENDS_TABLE_HEAD
 	friends_issues = list(repo.get_issues(labels=FRIENDS_LABELS))
+	if not FRIENDS_LABELS or not friends_issues:
+		return
 	friends_issue_number = friends_issues[0].number
 	for issue in friends_issues:
 		for comment in issue.get_comments():
@@ -194,6 +198,7 @@ def add_md_recent(repo, md, me, limit=5):
 					count += 1
 					if count >= limit:
 						break
+			md.write("\n")
 		except Exception as e:
 			print(str(e))
 
@@ -213,7 +218,7 @@ def add_md_about_me(repo, md, me):
 def add_md_header(md, repo_name):
 	with open(md, "w", encoding="utf-8") as md:
 		md.write(MD_HEAD.format(repo_name=repo_name))
-		md.write("\n")
+		md.write("\n\n")
 
 
 def add_md_label(repo, md, me):
@@ -253,7 +258,7 @@ def add_md_label(repo, md, me):
 					i += 1
 			if i > ANCHOR_NUMBER:
 				md.write("</details>\n")
-				md.write("\n")
+				md.write("\n\n")
 
 
 def get_to_generate_issues(repo, dir_name, issue_number=None):
