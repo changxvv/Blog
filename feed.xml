@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-10-14T08:02:32.794911+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/4</id><title>我的学习体系</title><updated>2023-10-14T08:02:33.569225+00:00</updated><content type="html"><![CDATA[<p>我认为人们需要构建自己的一整套学习体系，以达到终生学习的目的。</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-10-14T08:20:39.293347+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/4</id><title>我的学习体系</title><updated>2023-10-14T08:20:39.994783+00:00</updated><content type="html"><![CDATA[<p>我认为人们需要构建自己的一整套学习体系，以达到终生学习的目的。</p>
 <p>一套完整的学习体系应该包括人生目标管理系统、时间管理工具、信息收集系统、笔记系统、输出系统。</p>
 <p>关于构建个人的只是体系，另一个流行的等价概念便是「元学习」。</p>
 <h2>我的笔记系统</h2>
@@ -38,9 +38,9 @@
 <p>因为迁移 Anki 成本太大，目前我仍使用的是 SuperMemo：</p>
 <p><img src="https://github.com/changxvv/Blog/assets/40617368/22d8299e-2087-4488-af2a-ddb1e0d9aed0" alt="Pasted image 20231014154550" /></p>
 <p><img src="https://github.com/changxvv/Blog/assets/40617368/79e6cd43-b2e2-4596-b6a7-1b4c77894ec5" alt="Pasted image 20231014154659" /></p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/4" rel="alternate"/><category term="Tips"/><category term="TODO"/><published>2023-10-14T08:01:55+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/3</id><title>格式规范</title><updated>2023-10-14T08:02:33.931646+00:00</updated><content type="html"><![CDATA[<p>在 markdown 格式下进一步的格式要求。</p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/3" rel="alternate"/><category term="Top"/><published>2023-09-26T05:48:56+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/2</id><title>关于我</title><updated>2023-10-14T08:02:35.315984+00:00</updated><content type="html"><![CDATA[<p>本科 <em>中南大学</em> 在读。</p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/2" rel="alternate"/><category term="About me"/><published>2023-09-26T02:09:27+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-10-14T08:02:35.681292+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/4" rel="alternate"/><category term="Tips"/><category term="TODO"/><published>2023-10-14T08:01:55+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/3</id><title>格式规范</title><updated>2023-10-14T08:20:40.319228+00:00</updated><content type="html"><![CDATA[<p>在 markdown 格式下进一步的格式要求。</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/3" rel="alternate"/><category term="Top"/><published>2023-09-26T05:48:56+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/2</id><title>关于我</title><updated>2023-10-14T08:20:40.665317+00:00</updated><content type="html"><![CDATA[<p>本科 <em>中南大学</em> 在读。</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/2" rel="alternate"/><category term="About me"/><published>2023-09-26T02:09:27+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-10-14T08:20:41.001496+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
 <pre><code>名字：xxxxxx
 链接：xxxxxx
 描述：xxxxxx
