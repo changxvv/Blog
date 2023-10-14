@@ -8,6 +8,7 @@ My personal blog using issues and GitHub Actions.
   <sub><i>猫猫来自 <a href="https://weibo.com/u/2169547965">@魏大葱有木瓜</a></i></sub>
 </div> 
 
+
 ## About me
 本科 *中南大学* 在读。
 
@@ -39,13 +40,19 @@ My personal blog using issues and GitHub Actions.
 
 ## 置顶文章
 - [格式规范](https://github.com/changxvv/Blog/issues/3) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
+
 ## 最近更新
 - [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
 - [格式规范](https://github.com/changxvv/Blog/issues/3) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 - [友情链接](https://github.com/changxvv/Blog/issues/1) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 - [关于我](https://github.com/changxvv/Blog/issues/2) ![updated on](https://img.shields.io/badge/updated-2023--09--26-green)
+
 ## Tips
 - [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
 ## TODO
-<details><summary>TODO list from [我的学习体系](https://github.com/changxvv/Blog/issues/4) all done.</summary>
+<details>
+<summary>TODO list from [我的学习体系](https://github.com/changxvv/Blog/issues/4) —— 1 jobs to do, 0 jobs done.</summary>
+
+>- [ ] 需要完善人生目标管理系统、时间管理工具、信息收集系统、输出系统部分。
+
 </details>
