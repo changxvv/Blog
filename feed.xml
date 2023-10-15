@@ -1,5 +1,44 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-10-14T09:37:52.554893+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/4</id><title>我的学习体系</title><updated>2023-10-14T09:37:53.419498+00:00</updated><content type="html"><![CDATA[<p>我认为人们需要构建自己的一整套学习体系，以达到终生学习的目的。</p>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-10-15T11:05:41.300424+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/5</id><title>ArkCompiler 中的代码混淆</title><updated>2023-10-15T11:05:42.014470+00:00</updated><content type="html"><![CDATA[<h2>现有的混淆</h2>
+<p>在 DevEco 现有的最新版本里，采用的代码混淆是使用的是开源的 <a href="https://github.com/mishoo/UglifyJS">uglify</a>。</p>
+<pre><code class="language-json5">{
+	&quot;apiType&quot;: &quot;stageMode&quot;,
+	&quot;buildOption&quot;: {
+	    &quot;artifactType&quot;: &quot;obfuscation&quot; // 在项目设置文件中开启混淆
+	}
+}
+</code></pre>
+<p>在 DevEco 中调用的代码位于 <a href="https://gitee.com/openharmony/developtools_ace_ets2bundle/blob/master/compiler/uglify-source.js%E3%80%82">https://gitee.com/openharmony/developtools_ace_ets2bundle/blob/master/compiler/uglify-source.js。</a></p>
+<h2>Arkguard</h2>
+<p>Arkguard 是华为新开发的针对 Javascript 和 Typescript 的源码混淆工具。（我猜名称应该是模仿 Java 的开源混淆工具 ProGuard。）</p>
+<p>在文档中，Arkguard 只能用于 Stage 模型 (不支持 FA 模型)，并且 Arkguard 只提供名称混淆的能力（理由是因为其它混淆能力会劣化性能）。</p>
+<p>混淆的名称有：</p>
+<ul>
+<li>参数名和局部变量名</li>
+<li>顶层作用域的名称</li>
+<li>属性名称</li>
+</ul>
+<p>后两者默认关闭，因为默认打开可能会导致运行时错误。</p>
+<p>项目源代码结构：</p>
+<pre><code class="language-text">src
+├── ArkObfuscator.ts          // Entry，对文件进行代码混淆
+├── IObfuscator.ts            // 定义混淆接口
+├── cli                       // 调用ArkObfuscator，创建了混淆命令SecHarmony
+├── common                    // 提取目标文件中的API信息
+├── configs                   // 混淆的参数设置
+├── generator                 // 主文件NameFactory，生成不同类型的混淆名称
+├── transformers              // 被ArkObfuscator调用，进行代码转换和混淆
+│   ├── TransformPlugin.ts    // 接口定义
+│   ├── TransformerManager.ts // 根据混淆参数创建针对性的TransformerFactory进行代码混淆
+│   ├── layout                // 处理代码布局，有三个TransformerFactory，分别用于禁用控制台调用、禁用Hilog调用和简化代码
+│   └── rename                // 名称混淆，有三个TransformerFactory，分别用于重命名标识符、重命名属性、展开属性简写
+└── utils
+</code></pre>
+<h2>Reference</h2>
+<ul>
+<li>Arkguard 仓库及文档：<a href="https://gitee.com/openharmony/arkcompiler_ets_frontend/tree/master/arkguard">https://gitee.com/openharmony/arkcompiler_ets_frontend/tree/master/arkguard</a></li>
+</ul>
+]]></content><link href="https://github.com/changxvv/Blog/issues/5" rel="alternate"/><category term="HarmonyOS"/><published>2023-10-15T11:05:08+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/4</id><title>我的学习体系</title><updated>2023-10-15T11:05:42.339946+00:00</updated><content type="html"><![CDATA[<p>我认为人们需要构建自己的一整套学习体系，以达到终生学习的目的。</p>
 <p>一套完整的学习体系应该包括人生目标管理系统、时间管理工具、信息收集系统、笔记系统、输出系统。</p>
 <p>关于构建个人的只是体系，另一个流行的等价概念便是「元学习」。</p>
 <blockquote>
@@ -44,9 +83,9 @@
 <p>因为迁移 Anki 成本太大，目前我仍使用的是 SuperMemo：</p>
 <p><img src="https://github.com/changxvv/Blog/assets/40617368/22d8299e-2087-4488-af2a-ddb1e0d9aed0" alt="Pasted image 20231014154550" /></p>
 <p><img src="https://github.com/changxvv/Blog/assets/40617368/79e6cd43-b2e2-4596-b6a7-1b4c77894ec5" alt="Pasted image 20231014154659" /></p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/4" rel="alternate"/><category term="Tips"/><category term="TODO"/><published>2023-10-14T08:01:55+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/3</id><title>格式规范</title><updated>2023-10-14T09:37:53.839650+00:00</updated><content type="html"><![CDATA[<p>在 markdown 格式下进一步的格式要求。</p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/3" rel="alternate"/><category term="Top"/><published>2023-09-26T05:48:56+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/2</id><title>关于我</title><updated>2023-10-14T09:37:54.242485+00:00</updated><content type="html"><![CDATA[<p>本科 <em>中南大学</em> 在读。</p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/2" rel="alternate"/><category term="About me"/><published>2023-09-26T02:09:27+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-10-14T09:37:54.658869+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/4" rel="alternate"/><category term="Tips"/><category term="TODO"/><published>2023-10-14T08:01:55+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/3</id><title>格式规范</title><updated>2023-10-15T11:05:42.673052+00:00</updated><content type="html"><![CDATA[<p>在 markdown 格式下进一步的格式要求。</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/3" rel="alternate"/><category term="Top"/><published>2023-09-26T05:48:56+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/2</id><title>关于我</title><updated>2023-10-15T11:05:43.004720+00:00</updated><content type="html"><![CDATA[<p>本科 <em>中南大学</em> 在读。</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/2" rel="alternate"/><category term="About me"/><published>2023-09-26T02:09:27+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-10-15T11:05:43.329094+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
 <pre><code>名字：xxxxxx
 链接：xxxxxx
 描述：xxxxxx
