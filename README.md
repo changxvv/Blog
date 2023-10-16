@@ -50,9 +50,6 @@ My personal blog using issues and GitHub Actions.
 
 
 
-## To be continued
-- [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
-
 
 
 ## Tips
