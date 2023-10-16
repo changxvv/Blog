@@ -1,5 +1,3 @@
-# Xiaoyu ZHOU
-
 Hello!
 
-[Here](https://github.com/changxvv/Blog) is my blog.
+- [My Blog](https://github.com/changxvv/Blog).
