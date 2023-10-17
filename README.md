@@ -41,8 +41,8 @@ My personal blog using issues and GitHub Actions.
 - [格式规范](https://github.com/changxvv/Blog/issues/3) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 
 ## 最近更新
+- [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--17-green)
 - [ArkCompiler 中的代码混淆](https://github.com/changxvv/Blog/issues/5) ![updated on](https://img.shields.io/badge/updated-2023--10--15-green)
-- [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
 - [格式规范](https://github.com/changxvv/Blog/issues/3) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 - [友情链接](https://github.com/changxvv/Blog/issues/1) ![updated on](https://img.shields.io/badge/updated-2023--10--13-green)
 - [关于我](https://github.com/changxvv/Blog/issues/2) ![updated on](https://img.shields.io/badge/updated-2023--09--26-green)
@@ -53,7 +53,7 @@ My personal blog using issues and GitHub Actions.
 
 
 ## Tips
-- [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--14-green)
+- [我的学习体系](https://github.com/changxvv/Blog/issues/4) ![updated on](https://img.shields.io/badge/updated-2023--10--17-green)
 
 ## HarmonyOS
 - [ArkCompiler 中的代码混淆](https://github.com/changxvv/Blog/issues/5) ![updated on](https://img.shields.io/badge/updated-2023--10--15-green)
