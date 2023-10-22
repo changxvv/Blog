@@ -1,5 +1,49 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-10-17T09:40:03.600935+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/5</id><title>ArkCompiler 中的代码混淆</title><updated>2023-10-17T09:40:04.518893+00:00</updated><content type="html"><![CDATA[<h2>现有的混淆</h2>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>https://github.com/changxvv/Blog</id><title>RSS feed of changxvv's Blog</title><updated>2023-10-22T11:12:36.492432+00:00</updated><link href="https://github.com/changxvv/Blog"/><link href="https://raw.githubusercontent.com/changxvv/Blog/master/feed.xml" rel="self"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><entry><id>https://github.com/changxvv/Blog/issues/6</id><title>ArkCompiler 中的 IR</title><updated>2023-10-22T11:12:37.377961+00:00</updated><content type="html"><![CDATA[<p>看了一圈 ArkCompiler 相关仓库的文档，其中 runtime_core 仓库的文档是最全的，介绍了 ArkCompiler 的整体设计。</p>
+<p>ArkCompiler 中的字节码文件后缀为 abc，整个编译器运行时有一个名字叫做 Panda，所以说 Arkcompiler 的字节码又被成为 Panda 字节码。</p>
+<p>文档文件树如下：</p>
+<pre><code class="language-text">├── compiler
+│   └── docs                                 // 讲了各种各样在ir阶段的optimizations
+└── docs
+    ├── 2022-08-18-isa-changelog.md
+    ├── PBC2IR.md                            // Panda Bytecode转IR的对照表
+    ├── aot.md                               // 介绍arkcompiler的Ahead Of Time Compilation
+    ├── assembly_format.md                   // Panda字节码的格式
+    ├── bc_verification                      // 介绍字节码验证器
+    ├── cfi_directives.md                    // cfi指令用法
+    ├── code_metainfo.md                     // 介绍编译后的代码元信息
+    ├── coding-style.md
+    ├── debugger-vscode-communication.md
+    ├── design-of-interpreter.md             // 解释器设计
+    ├── file_format.md                       // 二进制文件格式
+    ├── glossary.md
+    ├── ir_format.md                         // 介绍ir的设计和格式
+    ├── irtoc.md                             // 将手工创建的IR编译为目标代码
+    ├── memory-management-SW-requirements.md
+    ├── memory-management.md                 // 内存管理
+    ├── on-stack-replacement.md              // 介绍OSR
+    ├── panda-runtime.md                     // 字节码文档目录
+    ├── rationale-for-bytecode.md            // 字节码设计原理
+    ├── runtime-class.md
+    ├── runtime-compiled_code-interaction.md // 编译后代码和运行时的交互
+    ├── runtime-debug-api.md
+    └── tracing.md
+</code></pre>
+<p>这里重点说一下 ir_format。里面提到了 ArkCompiler 使用了 Reverse Post Order (RPO)、Domtree、Linear Order 以及多种 Analysis 技术。并且提到了 Panda IR 处理的两个步骤：</p>
+<ol>
+<li>Panda bytecode 被转换为 <em>high-level</em> 的指令，进行部分架构独立的优化；</li>
+<li>指令被进一步分为几个 <em>low-level</em> 指令（接近汇编），再进行优化。</li>
+</ol>
+<p>第一个步骤是为了快速生成 IR，第二个步骤目标是 ARM64，然后进行 ARM 的特殊优化。文档也提到了支持 Panda IR 和 LLVM IR 之间的转换，这样就能允许进行 LLVM 的特殊优化。</p>
+<p>其次，在文档中，ArkCompiler 选择了 CFG (Control Flow Graph) with SSA (Static Single Assignment) 的架构而非 Sea-of-Nodes，原因是前者更简单通用并且更轻量。而 IR 的指令则使用类继承的方式来设计实现（<code>Inst</code> 是基类）。</p>
+<p>寄存器分配方面，目前使用的是消耗较小的 <em>Linear Scan</em> 算法，之后会考虑转向 <em>Graph-coloring</em> 算法，因为它能生成更高效的代码。</p>
+<p>IR 转机器码方面，目前 ArkCompiler 使用的是标准 vixl 库，算是 ARM 的技术。之后可能会考虑自己实现这部分。</p>
+<p>值得注意的是，最近 runtime_core 仓库中增加了一个 static_core 模块，里面对现有的 core 做了改动，文档也更丰富了。比如 compiler 部分新增加了几十种在字节码阶段的优化方法的文档（如 branch_elimination、loop_unrolling）；其次，在主文档内还添加了 Deoptimization、Cross-Value 等新功能的文档。</p>
+<h2>Reference</h2>
+<ul>
+<li>runtime_core 仓库：<a href="https://gitee.com/openharmony/arkcompiler_runtime_core">https://gitee.com/openharmony/arkcompiler_runtime_core</a></li>
+</ul>
+]]></content><link href="https://github.com/changxvv/Blog/issues/6" rel="alternate"/><category term="HarmonyOS"/><published>2023-10-22T11:11:53+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/5</id><title>ArkCompiler 中的代码混淆</title><updated>2023-10-22T11:12:37.783437+00:00</updated><content type="html"><![CDATA[<h2>现有的混淆</h2>
 <p>在 DevEco 现有的最新版本里，采用的代码混淆是使用的是开源的 <a href="https://github.com/mishoo/UglifyJS">uglify</a>。</p>
 <pre><code class="language-json5">{
 	&quot;apiType&quot;: &quot;stageMode&quot;,
@@ -38,7 +82,7 @@
 <ul>
 <li>Arkguard 仓库及文档：<a href="https://gitee.com/openharmony/arkcompiler_ets_frontend/tree/master/arkguard">https://gitee.com/openharmony/arkcompiler_ets_frontend/tree/master/arkguard</a></li>
 </ul>
-]]></content><link href="https://github.com/changxvv/Blog/issues/5" rel="alternate"/><category term="HarmonyOS"/><published>2023-10-15T11:05:08+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/4</id><title>我的学习体系</title><updated>2023-10-17T09:40:04.974228+00:00</updated><content type="html"><![CDATA[<p>我认为人们需要构建自己的一整套学习体系，以达到终生学习的目的。</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/5" rel="alternate"/><category term="HarmonyOS"/><published>2023-10-15T11:05:08+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/4</id><title>我的学习体系</title><updated>2023-10-22T11:12:38.192419+00:00</updated><content type="html"><![CDATA[<p>我认为人们需要构建自己的一整套学习体系，以达到终生学习的目的。</p>
 <p>一套完整的学习体系应该包括人生目标管理系统、时间管理工具、信息收集系统、笔记系统、输出系统。</p>
 <p>关于构建个人的只是体系，另一个流行的等价概念便是「元学习」。</p>
 <blockquote>
@@ -83,9 +127,9 @@
 <p>因为迁移 Anki 成本太大，目前我仍使用的是 SuperMemo：</p>
 <p><img src="https://github.com/changxvv/Blog/assets/40617368/22d8299e-2087-4488-af2a-ddb1e0d9aed0" alt="Pasted image 20231014154550" /></p>
 <p><img src="https://github.com/changxvv/Blog/assets/40617368/79e6cd43-b2e2-4596-b6a7-1b4c77894ec5" alt="Pasted image 20231014154659" /></p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/4" rel="alternate"/><category term="Tips"/><category term="To be continued"/><published>2023-10-14T08:01:55+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/3</id><title>格式规范</title><updated>2023-10-17T09:40:05.392910+00:00</updated><content type="html"><![CDATA[<p>在 markdown 格式下进一步的格式要求。</p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/3" rel="alternate"/><category term="Top"/><published>2023-09-26T05:48:56+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/2</id><title>关于我</title><updated>2023-10-17T09:40:05.877756+00:00</updated><content type="html"><![CDATA[<p>本科 <em>中南大学</em> 在读。</p>
-]]></content><link href="https://github.com/changxvv/Blog/issues/2" rel="alternate"/><category term="About me"/><published>2023-09-26T02:09:27+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-10-17T09:40:06.310177+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/4" rel="alternate"/><category term="Tips"/><category term="To be continued"/><published>2023-10-14T08:01:55+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/3</id><title>格式规范</title><updated>2023-10-22T11:12:38.608359+00:00</updated><content type="html"><![CDATA[<p>在 markdown 格式下进一步的格式要求。</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/3" rel="alternate"/><category term="Top"/><published>2023-09-26T05:48:56+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/2</id><title>关于我</title><updated>2023-10-22T11:12:39.040369+00:00</updated><content type="html"><![CDATA[<p>本科 <em>中南大学</em> 在读。</p>
+]]></content><link href="https://github.com/changxvv/Blog/issues/2" rel="alternate"/><category term="About me"/><published>2023-09-26T02:09:27+00:00</published></entry><entry><id>https://github.com/changxvv/Blog/issues/1</id><title>友情链接</title><updated>2023-10-22T11:12:39.465080+00:00</updated><content type="html"><![CDATA[<p>添加友情链接，被我打上❤后会自动加到友情链接里。格式为：</p>
 <pre><code>名字：xxxxxx
 链接：xxxxxx
 描述：xxxxxx
